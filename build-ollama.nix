@@ -8,7 +8,7 @@
 , stdenv
 
 , cmake
-, gcc12
+, gcc11
 , clblast
 , libdrm
 , rocmPackages
