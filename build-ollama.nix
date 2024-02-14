@@ -18,7 +18,7 @@
 , enableRocm ? stdenv.isLinux
 , enableCuda ? stdenv.isLinux
   # `nvcc` doesn't support the latest version of gcc
-, cudaGcc ? gcc12
+, cudaGcc ? gcc11
 }:
 
 let
