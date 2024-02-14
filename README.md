@@ -36,6 +36,9 @@ Use as an input in another flake:
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
     ollama.url = "github:abysssol/ollama-flake";
+    # do not do this -> `ollama.inputs.nixpkgs.follows = "nixpkgs";`
+    # because a specific version of nixpkgs is required
+    # overriding nixpkgs will most likely break the flake
   };
 
   outputs = { nixpkgs, ollama, ... }:
