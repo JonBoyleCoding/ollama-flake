@@ -35,11 +35,7 @@ Use as an input in another flake:
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
-    ollama = {
-      url = "github:abysssol/ollama-flake";
-      # this could potentially break the build
-      inputs.nixpkgs.follows = "nixpkgs"; # if ollama doesn't build, try removing this
-    };
+    ollama.url = "github:abysssol/ollama-flake";
   };
 
   outputs = { nixpkgs, ollama, ... }:
@@ -73,7 +69,7 @@ nix profile install github:abysssol/ollama-flake/1
 
 Use an unchanging tagged version:
 ``` shell
-nix profile install github:abysssol/ollama-flake/1.3.0
+nix profile install github:abysssol/ollama-flake/1.3.1
 ```
 
 Alternate packages can be specified as usual.
